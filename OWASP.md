@@ -21,6 +21,8 @@ BOLA vulnerabilities occur when an API provider does not have sufficient control
 * GET /user/account/find?user_id=aE1230000token
 * POST /company/account/Apple/balance
 * GET /admin/settings/account/bman
+![Type of Bola](Images/bola_test.webp)
+
 
 ### Preventative Measures
 In order to improve API security, it is important to implement robust authorization controls. These controls should consider user policies and role-based access control hierarchies. The primary focus should be to ensure that authenticated users only have access to resources they are authorized to have access to. Using less predictable resource IDs can increase the challenge of a user or attacker guessing the resource IDs of other users. Developers should perform tests that specifically test authorization controls. 
