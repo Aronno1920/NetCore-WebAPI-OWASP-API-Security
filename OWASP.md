@@ -73,3 +73,7 @@ Where possible, implement multi-factor authentication.
 Implement anti-brute force mechanisms to mitigate credential stuffing, dictionary attacks, and brute force attacks on your authentication endpoints. This mechanism should be stricter than the regular rate limiting mechanisms on your APIs.
 Implement account lockout/captcha mechanisms to prevent brute force attacks against specific users. Implement weak-password checks.
 API keys should not be used for user authentication. They should only be used for API clients authentication.
+
+
+
+## API3:2023 Broken Object Property Level Authorization
