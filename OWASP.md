@@ -1,7 +1,6 @@
 # What is OWASP?
 
 The Open Web Application Security Project (OWASP) is an international non-profit organization dedicated to web application security. OWASP API Security Top Ten and Beyond! is meant to help improve the skills of bug bounty hunters, developers, penetration testers, organizational leadership, and anyone else interested in learning about API security.
-
 <br><br>
 ## Course Objectives
 
@@ -17,7 +16,6 @@ The OWASP API Security Top 10 is a list of the most critical security risks for 
 * **API8:2023 :** Security Misconfiguration
 * **API9:2023 :** Improper Inventory Management
 * **API10:2023 :** Unsafe Consumption of APIs
-
 <br><br>
 ## API1:2023 Broken Object Level Authorization
 
@@ -40,7 +38,6 @@ In order to improve API security, it is important to implement robust authorizat
 * Use the authorization mechanism to check if the logged-in user has access to perform the requested action on the record in every function that uses an input from the client to access a record in the database.
 * Prefer the use of random and unpredictable values as GUIDs for records' IDs.
 * Write tests to evaluate the vulnerability of the authorization mechanism. Do not deploy changes that make the tests fail.
-
 <br><br>
 ## API2:2023 Broken Authentication
 
@@ -93,7 +90,6 @@ Where possible, implement multi-factor authentication.
 Implement anti-brute force mechanisms to mitigate credential stuffing, dictionary attacks, and brute force attacks on your authentication endpoints. This mechanism should be stricter than the regular rate limiting mechanisms on your APIs.
 Implement account lockout/captcha mechanisms to prevent brute force attacks against specific users. Implement weak-password checks.
 API keys should not be used for user authentication. They should only be used for API clients authentication.
-
 <br><br>
 ## API3:2023 Broken Object Property Level Authorization (BOPLA)
 
@@ -112,8 +108,6 @@ The OWASP API Security Project states that an API endpoint is vulnerable if:
 * Allow changes only to the object's properties that should be updated by the client.
 * Implement a schema-based response validation mechanism as an extra layer of security. As part of this mechanism, define and enforce data returned by all API methods.
 * Keep returned data structures to the bare minimum, according to the business/functional requirements for the endpoint.
-
-
 
 <br><br>
 ## API4:2023 : Unrestricted Resource Consumption
