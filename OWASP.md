@@ -104,7 +104,13 @@ The OWASP API Security Project states that an API endpoint is vulnerable if:
 * The API endpoint exposes properties of an object that are considered sensitive and should not be read by the user. (previously named: "Excessive Data Exposure")
 * The API endpoint allows a user to change, add/or delete the value of a sensitive object's property which the user should not be able to access (previously named: "Mass Assignment")
 
-### Description
+### OWASP Preventative Measures
+* When exposing an object using an API endpoint, always make sure that the user should have access to the object's properties you expose.
+* Avoid using generic methods such as to_json() and to_string(). Instead, cherry-pick specific object properties you specifically want to return.
+* If possible, avoid using functions that automatically bind a client's input into code variables, internal objects, or object properties ("Mass Assignment").
+* Allow changes only to the object's properties that should be updated by the client.
+* Implement a schema-based response validation mechanism as an extra layer of security. As part of this mechanism, define and enforce data returned by all API methods.
+* Keep returned data structures to the bare minimum, according to the business/functional requirements for the endpoint.
 
 
 
