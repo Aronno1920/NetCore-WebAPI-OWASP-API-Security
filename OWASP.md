@@ -94,7 +94,17 @@ Implement account lockout/captcha mechanisms to prevent brute force attacks agai
 API keys should not be used for user authentication. They should only be used for API clients authentication.
 
 <br><br><br>
-## API3:2023 Broken Object Property Level Authorization
+## API3:2023 Broken Object Property Level Authorization (BOPLA)
+
+### Description
+Broken Object Property Level Authorization (BOPLA) is a combination of Mass Assignment and Excessive Data Exposure. In the 2023 release notes the security project states, that these two vulnerabilities were combined "focusing on the common root cause: object property level authorization validation failures".
+
+The OWASP API Security Project states that an API endpoint is vulnerable if:
+
+* The API endpoint exposes properties of an object that are considered sensitive and should not be read by the user. (previously named: "Excessive Data Exposure")
+* The API endpoint allows a user to change, add/or delete the value of a sensitive object's property which the user should not be able to access (previously named: "Mass Assignment")
+
+### Description
 
 
 
