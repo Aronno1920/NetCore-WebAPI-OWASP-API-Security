@@ -1,9 +1,7 @@
 # What is OWASP?
-
 The Open Web Application Security Project (OWASP) is an international non-profit organization dedicated to web application security. OWASP API Security Top Ten and Beyond! is meant to help improve the skills of bug bounty hunters, developers, penetration testers, organizational leadership, and anyone else interested in learning about API security.
 <br><br>
 ## Course Objectives
-
 The OWASP API Security Top 10 is a list of the most critical security risks for Application Programming Interfaces. Develop a strong foundation in the following API security risks:
 
 * **API1:2023 :** Broken Object Level Authorization
@@ -18,9 +16,7 @@ The OWASP API Security Top 10 is a list of the most critical security risks for 
 * **API10:2023 :** Unsafe Consumption of APIs
 <br><br>
 ## API1:2023 Broken Object Level Authorization
-
 ### Description
-
 BOLA vulnerabilities occur when an API provider does not have sufficient controls in place to enforce authorization. In other words, API users should only have access to sensitive resources that belong to them. When BOLA is present an attacker will be able to access the sensitive data of other users. Example:
 
 * GET /api/user/1
@@ -31,7 +27,6 @@ BOLA vulnerabilities occur when an API provider does not have sufficient control
 ![Type of Bola](Images/bola_test.webp)
 
 ### Preventative Measures
-
 In order to improve API security, it is important to implement robust authorization controls. These controls should consider user policies and role-based access control hierarchies. The primary focus should be to ensure that authenticated users only have access to resources they are authorized to have access to. Using less predictable resource IDs can increase the challenge of a user or attacker guessing the resource IDs of other users. Developers should perform tests that specifically test authorization controls.
 
 * Implement a proper authorization mechanism that relies on the user policies and hierarchy.
@@ -40,13 +35,10 @@ In order to improve API security, it is important to implement robust authorizat
 * Write tests to evaluate the vulnerability of the authorization mechanism. Do not deploy changes that make the tests fail.
 <br><br>
 ## API2:2023 Broken Authentication
-
 ### Description
-
 Attackers can gain complete control of other user's accounts in the system, read their personal data, and perform sensitive actions on their behalf. Systems are unlikely to be able to distinguish attacker's actions from legitimate user ones.
 
 ###### Weak Password Policy
-
 A weak password policy does not sufficiently protect user accounts by enforcing strong password creation and management.
 
 * Allows users to create simple passwords
@@ -58,19 +50,16 @@ A weak password policy does not sufficiently protect user accounts by enforcing 
 * Lacking authentication for sensitive requests
 
 ###### Credential Stuffing
-
 Credential stuffing is a type of attack against authentication where a large number of username and password combinations are attempted. Credentials used in these types of attacks are typically collected from data breaches.
 
 * Allows users to brute force many username and password combinations
 
 ###### Predictable Tokens
-
 Predictable tokens refer to any token obtained through a weak token generation authentication process. Weak tokens can easily be guessed, deduced, or calculated by an attacker.
 
 * Using incremental or guessable token IDs
 
 ###### Misconfigured JSON Web Tokens
-
 JSON Web Tokens (JWTs) are commonly used for API authentication and authorization processes. JWTs provide developers with the flexibility to customize which algorithm is used for signing the token, the key/secret that is used, and the information used in the payload. This customization allows for plenty of room for security misconfigurations to occur.
 
 * API provider accepts unsigned JWT tokens
@@ -79,7 +68,6 @@ JSON Web Tokens (JWTs) are commonly used for API authentication and authorizatio
 * JWT is signed with a weak key
 
 ### OWASP Preventative Measures
-
 * Make sure you know all the possible flows to authenticate to the API (mobile/ web/deep links that implement one-click authentication/etc.). Ask your engineers what flows you missed.
 * Read about your authentication mechanisms. Make sure you understand what and how they are used. OAuth is not authentication, and neither are API keys.
 * Don't reinvent the wheel in authentication, token generation, or password storage. Use the standards.
@@ -92,7 +80,6 @@ Implement account lockout/captcha mechanisms to prevent brute force attacks agai
 API keys should not be used for user authentication. They should only be used for API clients authentication.
 <br><br>
 ## API3:2023 Broken Object Property Level Authorization (BOPLA)
-
 ### Description
 Broken Object Property Level Authorization (BOPLA) is a combination of Mass Assignment and Excessive Data Exposure. In the 2023 release notes the security project states, that these two vulnerabilities were combined "focusing on the common root cause: object property level authorization validation failures".
 
@@ -109,16 +96,11 @@ The OWASP API Security Project states that an API endpoint is vulnerable if:
 * Implement a schema-based response validation mechanism as an extra layer of security. As part of this mechanism, define and enforce data returned by all API methods.
 * Keep returned data structures to the bare minimum, according to the business/functional requirements for the endpoint.
 <br><br>
-
-
 ## API4:2023 : Unrestricted Resource Consumption
-
 ### Description
-
 Every API request has a technical and financial cost. When API providers do not enforce limitations on resource consumption there is an increased risk of denial of service (DoS), distributed denial of service (DDoS), unnecessary financial costs, and degradation of the quality of service to other users. In addition, rate limiting plays an important role in the monetization and availability of APIs. Many API providers monetize their APIs by limiting requests and allowing paid customers to request more information. RapidAPI, for example, allows Some API providers also have infrastructure that automatically scales with the number of requests. In these cases, an unlimited number of requests would lead to a significant and easily preventable increase in infrastructure costs.
 
-The OWASP API Security Project states:
-
+**The OWASP API Security Project states**:
 An API is vulnerable if at least one of the following limits is missing or set inappropriately (e.g. too low/high):
 
 * Execution timeouts
