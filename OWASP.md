@@ -108,12 +108,34 @@ The OWASP API Security Project states that an API endpoint is vulnerable if:
 * Allow changes only to the object's properties that should be updated by the client.
 * Implement a schema-based response validation mechanism as an extra layer of security. As part of this mechanism, define and enforce data returned by all API methods.
 * Keep returned data structures to the bare minimum, according to the business/functional requirements for the endpoint.
-
 <br><br>
+
+
 ## API4:2023 : Unrestricted Resource Consumption
 
+### Description
 
+Every API request has a technical and financial cost. When API providers do not enforce limitations on resource consumption there is an increased risk of denial of service (DoS), distributed denial of service (DDoS), unnecessary financial costs, and degradation of the quality of service to other users. In addition, rate limiting plays an important role in the monetization and availability of APIs. Many API providers monetize their APIs by limiting requests and allowing paid customers to request more information. RapidAPI, for example, allows Some API providers also have infrastructure that automatically scales with the number of requests. In these cases, an unlimited number of requests would lead to a significant and easily preventable increase in infrastructure costs.
 
+The OWASP API Security Project states:
+
+An API is vulnerable if at least one of the following limits is missing or set inappropriately (e.g. too low/high):
+
+* Execution timeouts
+* Maximum allocable memory
+* Maximum number of file descriptors
+* Maximum number of processes
+* Maximum upload file size
+* Number of operations to perform in a single API client request (e.g. GraphQL batching)
+* Number of records per page to return in a single request-response
+* Third-party service providers' spending limit
+
+### OWASP Preventative Measures
+* Docker makes it easy to limit memory, CPU, number of restarts, file descriptors, and processes.
+* Implement a limit on how often a client can call the API within a defined timeframe.
+* Notify the client when the limit is exceeded by providing the limit number and the time at which the limit will be reset.
+* Add proper server-side validation for query string and request body parameters, specifically the one that controls the number of records to be returned in the response.
+* Define and enforce maximum size of data on all incoming parameters and payloads such as maximum length for strings and maximum number of elements in arrays.
 <br><br>
 ## API5:2023 : Broken Function Level Authorization
 
