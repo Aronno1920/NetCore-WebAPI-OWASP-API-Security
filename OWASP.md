@@ -31,7 +31,7 @@ In order to improve API security, it is important to implement robust authorizat
 * Use the authorization mechanism to check if the logged-in user has access to perform the requested action on the record in every function that uses an input from the client to access a record in the database.
 * Prefer the use of random and unpredictable values as GUIDs for records' IDs.
 * Write tests to evaluate the vulnerability of the authorization mechanism. Do not deploy changes that make the tests fail.
-
+<br/><br/>
 
 ## API2:2023 Broken Authentication
 ### Description
