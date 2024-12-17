@@ -17,7 +17,7 @@ The OWASP API Security Top 10 is a list of the most critical security risks for 
 * **API9:2023 :** Improper Inventory Management
 * **API10:2023 :** Unsafe Consumption of APIs
 
-<br><br><br>
+<br><br>
 ## API1:2023 Broken Object Level Authorization
 
 ### Description
@@ -40,7 +40,7 @@ In order to improve API security, it is important to implement robust authorizat
 * Prefer the use of random and unpredictable values as GUIDs for records' IDs.
 * Write tests to evaluate the vulnerability of the authorization mechanism. Do not deploy changes that make the tests fail.
 
-<br><br><br>
+<br><br>
 ## API2:2023 Broken Authentication
 
 ### Description
@@ -93,7 +93,7 @@ Implement anti-brute force mechanisms to mitigate credential stuffing, dictionar
 Implement account lockout/captcha mechanisms to prevent brute force attacks against specific users. Implement weak-password checks.
 API keys should not be used for user authentication. They should only be used for API clients authentication.
 
-<br><br><br>
+<br><br>
 ## API3:2023 Broken Object Property Level Authorization (BOPLA)
 
 ### Description
@@ -114,37 +114,37 @@ The OWASP API Security Project states that an API endpoint is vulnerable if:
 
 
 
-<br><br><br>
+<br><br>
 ## API4:2023 : Unrestricted Resource Consumption
 
 
 
-<br><br><br>
+<br><br>
 ## API5:2023 : Broken Function Level Authorization
 
 
 
-<br><br><br>
+<br><br>
 ## API6:2023 : Unrestricted Access to Sensitive Business Flows
 
 
 
-<br><br><br>
+<br><br>
 ## API7:2023 : Server Side Request Forgery
 
 
 
-<br><br><br>
+<br><br>
 ## API8:2023 : Security Misconfiguration
 
 
 
-<br><br><br>
+<br><br>
 ## API9:2023 : Improper Inventory Management
 
 
 
-<br><br><br>
+<br><br>
 ## API10:2023 : Unsafe Consumption of APIs
 
 
